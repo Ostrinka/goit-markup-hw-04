@@ -47,6 +47,7 @@ body {
 
 .page-header {
   border-bottom: 1px solid #E7E9FC;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .container {
@@ -119,7 +120,7 @@ body {
   content: '';
   position: absolute;
   left: 0px;
-  bottom: 0px;
+  bottom: -1px;
   display: block;
   width: 100%;
   height: 4px;
@@ -155,6 +156,8 @@ body {
 }
 
 .section-title {
+  max-width: 1440px;
+  margin: 0 auto;
   background: #2E2F42;
   padding-top: 188px;
   padding-bottom: 188px;
@@ -163,6 +166,8 @@ body {
         rgba(46, 47, 66, 0.7)),
       url('../images/hero/bg.jpg');
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   }
 
 .title {
@@ -192,7 +197,7 @@ body {
   border: none;
   border-radius: 4px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-click:hover,
@@ -332,7 +337,7 @@ body {
   background-color: #4D5AE5;
   width: 100%;
   height: 100%;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link:hover, 
@@ -360,10 +365,10 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 40px 32px 164px 32px;
+  padding: 40px 32px;
   overflow: auto;
   transform: translateY(100%);
-  transition: transform 250ms linear;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-list:hover .overlay {
@@ -426,6 +431,7 @@ body {
 
 .footer-container {
   flex-direction: column;
+  margin-right: 120px
 }
 
 .footer-chapter {
@@ -436,8 +442,8 @@ body {
 
 .container-footer-all {
   display: flex;
-  gap: 120px;
-}
+  align-items: baseline;
+} 
 
 .footer-menu {
   display: flex;
